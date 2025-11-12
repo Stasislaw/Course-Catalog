@@ -1,0 +1,158 @@
+{ 
+  "categories": [ 
+    { "id": 1, "name": "Programowanie", "slug": "programowanie", "color": "#4f46e5", "icon": "code" }, 
+    { "id": 2, "name": "Design", "slug": "design", "color": "#16a34a", "icon": "palette" }, 
+    { "id": 3, "name": "Data Science", "slug": "data-science", "color": "#f59e0b", "icon": "database" }, 
+    { "id": 4, "name": "Marketing", "slug": "marketing", "color": "#ef4444", "icon": "megaphone" } 
+  ], 
+  "instructors": [ 
+    {
+      "id": 101, 
+      "name": "Ola Nowak", 
+      "avatar": "/img/instructors/ola.jpg", 
+      "bio": "Frontend dev, 8 lat doświadczenia w React i TypeScript.", 
+      "rating": 4.8, 
+      "social": { "www": "https://example.com/ola", "github": "olanowak", "twitter": "ola_dev" } 
+    }, 
+    { 
+      "id": 102, 
+      "name": "Jan Kowalski", 
+      "avatar": "/img/instructors/jan.jpg", 
+      "bio": "Senior UX/UI designer, projektuje systemy designu.", 
+      "rating": 4.6, 
+      "social": { "www": "https://example.com/jan", "dribbble": "jank" } 
+    } 
+  ], 
+  "courses": [ 
+    { 
+      "id": 1001, 
+      "title": "React od zera do SPA", 
+      "slug": "react-od-zera-do-spa", 
+      "categoryId": 1, 
+      "instructorId": 101, 
+      "level": "beginner", 
+      "rating": 4.7, 
+      "price": 199, 
+      "discountPrice": 149, 
+      "durationHours": 14, 
+      "lessonsCount": 42, 
+      "language": "pl", 
+      "tags": ["react", "vite", "spa", "hooks"], 
+      "thumbnail": "/img/courses/react.jpg", 
+      "shortDesc": "Zbuduj pierwszą aplikację SPA w React z Routerem i formularzami.", 
+      "updatedAt": "2025-10-01", 
+      "featured": true, 
+      "bestseller": true, 
+      "syllabus": [ 
+        { 
+          "section": "Wprowadzenie", 
+          "items": [ 
+            { "title": "Czym jest SPA", "preview": true, "durationMin": 8 }, 
+            { "title": "Instalacja Vite", "preview": true, "durationMin": 12 } 
+          ] 
+        }, 
+        { 
+          "section": "React w praktyce", 
+          "items": [ 
+            { "title": "Komponenty i propsy", "preview": false, "durationMin": 18 }, 
+            { "title": "Stan i efekty", "preview": false, "durationMin": 22 } 
+          ] 
+        } 
+      ] 
+    }, 
+    { 
+      "id": 1002, 
+      "title": "UX/UI w praktyce: od briefu do design systemu", 
+      "slug": "ux-ui-w-praktyce", 
+      "categoryId": 2, 
+      "instructorId": 102, 
+      "level": "intermediate", 
+      "rating": 4.5, 
+      "price": 249, 
+      "discountPrice": null, 
+      "durationHours": 10, 
+      "lessonsCount": 30, 
+      "language": "pl", 
+      "tags": ["ux", "ui", "figma", "design-system"], 
+      "thumbnail": "/img/courses/uxui.jpg", 
+      "shortDesc": "Ćwiczeniowy kurs tworzenia spójnego design systemu.", 
+      "updatedAt": "2025-09-20", 
+      "featured": true, 
+      "bestseller": false, 
+      "syllabus": [ 
+        { 
+          "section": "Badania i brief", 
+          "items": [ 
+            { "title": "Wywiady i persony", "preview": true, "durationMin": 15 }, 
+            { "title": "Mapa podróży użytkownika", "preview": false, "durationMin": 20 } 
+          ] 
+        }, 
+        { 
+          "section": "Komponenty i warianty", 
+          "items": [ 
+            { "title": "Biblioteka w Figma", "preview": false, "durationMin": 25 }, 
+            { "title": "Stany i interakcje", "preview": false, "durationMin": 18 } 
+          ] 
+        } 
+      ] 
+    }, 
+    { 
+      "id": 1003, 
+      "title": "Wprowadzenie do Data Science", 
+      "slug": "wprowadzenie-do-data-science", 
+      "categoryId": 3, 
+      "instructorId": 101, 
+      "level": "beginner", 
+      "rating": 4.4, 
+      "price": 0, 
+      "discountPrice": 0, 
+      "durationHours": 8, 
+      "lessonsCount": 24, 
+      "language": "pl", 
+      "tags": ["python", "pandas", "etl"], 
+      "thumbnail": "/img/courses/datascience.jpg", 
+      "shortDesc": "Pierwsze kroki: pandas, czyszczenie danych, podstawy wizualizacji.", 
+      "updatedAt": "2025-10-10", 
+      "featured": false, 
+      "bestseller": false, 
+      "syllabus": [ 
+        { 
+          "section": "Start", 
+          "items": [ 
+            { "title": "Instalacja i środowisko", "preview": true, "durationMin": 10 }, 
+            { "title": "Pandas 101", "preview": false, "durationMin": 22 } 
+          ] 
+        } 
+      ] 
+    } 
+  ], 
+  "reviews": [ 
+    { 
+      "id": 90001, 
+      "courseId": 1001, 
+      "author": "Mateusz", 
+      "rating": 5, 
+      "comment": "Bardzo praktyczne przykłady i dobre tempo.", 
+      "createdAt": "2025-10-12", 
+      "approved": true 
+    }, 
+    { 
+      "id": 90002, 
+      "courseId": 1002, 
+      "author": "Ania", 
+      "rating": 4, 
+      "comment": "Świetna część o design systemie.", 
+      "createdAt": "2025-10-18", 
+      "approved": true 
+    } 
+  ], 
+  "enrollments": [ 
+    { 
+      "id": 50001, 
+      "courseId": 1001, 
+      "email": "user@example.com", 
+      "createdAt": "2025-10-22", 
+      "status": "confirmed" 
+    } 
+  ] 
+} 
