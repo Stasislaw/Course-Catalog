@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { he } from "zod/locales";
 import { useForm } from "react-hook-form";
+import styles from './Home.module.css';
 
 function useDebounce(value, delay) {
   const [debounced, setDebounced] = useState(value);
@@ -50,10 +51,10 @@ export default function Home() {
     
     return (
     <>
-      <h1>Home</h1>
+      <h1 className={styles.Home}>Home</h1>
       {/* Search bar */}
       <form>
-        <input type="text" placeholder="Search courses" {...register("search")}/>
+        <input className={styles.Search} type="text" placeholder="Search courses" {...register("search")}/>
       </form>
       {/* Search results */}
       <div>
@@ -82,18 +83,19 @@ export default function Home() {
       
       {/* Categories */}
       <div>
-        <h2>Reccomended categories</h2>
+        <h2 className={styles.RC}>Reccomended categories</h2>
         <ul>
           {categories.map(category => (
-            <li key={category.id} style={{backgroundColor: category.color, color: "black"}}>
-              <Link to={`courses?category=${category.slug}`}>
+            <li key={category.id} style={{borderColor: category.color, backgroundColor: category.color+"aa",}} className={styles.RecCatCard}>
+              <Link to={`courses?category=${category.slug}`} className={styles.RCLink}>
                 <img src={"/img/" + category.icon + ".png"} alt={category.icon}
-                style={{
-                  width: 20,
-                  height: 20
-                }}
+                // style={{
+                //   width: 20,
+                //   height: 20
+                // }}
+                className={styles.RCimg}
                 />
-                <h3>{category.name}</h3>
+                <h3 className={styles.RCh3}>{category.name}</h3>
               </Link>
             </li>
           ))}

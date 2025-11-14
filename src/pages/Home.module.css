@@ -1,0 +1,86 @@
+.RecCatCard
+{
+    /* background-color: black; */
+    /* color: black; */
+    border: 10px solid;
+    border-radius: 1em;
+}
+
+.RCimg
+{
+    width: 150px;
+}
+
+.RCh3
+{
+    text-decoration: none !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color:red; */
+    font-size: 32px;
+    color: var(--text-col);
+    /* color: red; */
+}
+
+.RCh3:hover
+{
+    color: var(--lighter-text-col);
+}
+
+.Home
+{
+    /* font-weight: bold; */
+    /* color: red; */
+    margin-left: 20px;
+}
+
+.Search
+{
+    margin-left: 80px;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: var(--button-bg-col);
+    outline: none;
+    color: var(--lighter-text-col);
+}
+
+.Search::placeholder
+{
+    color: var(--text-col);
+}
+
+.RC
+{
+    text-align: center;
+    font-size: 32px;
+    padding: 25px;
+}
+
+.RCLink
+{
+    display: flex;
+    padding: 20px;
+}
+
+li a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+li
+{
+    border: 2px solid var(--button-bg-col);
+    box-shadow: 
+      0 0 10px .25em var(--button-bg-dark-col);
+    padding: 10px;
+    margin: 10px;
+}
+
+li img
+{
+    float: left;
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route, NavLink} from 'react-router-dom'
-import reactLogo from './assets/react.svg'
+import Logo from './assets/graduation_hat.png'
 // import viteLogo from '/vite.svg'
 import './App.css'
 
@@ -20,13 +20,13 @@ export default function App() {
     <>
       <BrowserRouter>
         <nav>
-          <img src={reactLogo}></img>
-            <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Home</NavLink>
-            <NavLink to="/courses" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Courses</NavLink>
-            <NavLink to="/favorites" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Favorites</NavLink>
-            <NavLink to="/admin" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Admin</NavLink>
-            <NavLink to="/checkout" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Checkout</NavLink>
-            <NavLink to="/profile" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Profile</NavLink>
+          <img src={Logo}></img>
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Home</NavLink>
+          <NavLink to="/courses" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Courses</NavLink>
+          <NavLink to="/favorites" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Favorites</NavLink>
+          <NavLink to="/admin" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Admin</NavLink>
+          <NavLink to="/checkout" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Checkout</NavLink>
+          <NavLink to="/profile" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>Profile</NavLink>
         </nav>
 
         <Routes>

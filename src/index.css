@@ -12,9 +12,20 @@ html, body {
 
 #root {
   min-height: 100vh;       
-  background-color: #3f3f3f;
+  background-color: var(--bg-col);
   color: #9a39a7;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
+}
+
+:root
+{
+  --bg-col:#2E073F;
+  --button-bg-light-col:#9549bd;
+  --button-bg-col:#7A1CAC;
+  --button-bg-dark-col:#62168a;
+  /* --button-bg-dark-col:#3d0e56; */
+  --text-col:#AD49E1;
+  --lighter-text-col:#EBD3F8;
 }
