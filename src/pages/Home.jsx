@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { Link } from "react-router-dom";
 import { he } from "zod/locales";
 import { useForm } from "react-hook-form";
@@ -19,6 +19,7 @@ export default function Home() {
 
   const [categories, setCategories] = useState([]);
   const [courses, setCourses] = useState([]);
+  const [featuredCourses, setFeaturedCourses] = useState([]);
 
   const { register, watch } = useForm({
     defaultValues: {
@@ -34,6 +35,11 @@ export default function Home() {
       .then(res => res.json())
       .then(data => {
         setCategories(data);
+      });
+    fetch("http://localhost:3001/courses?featured=true")
+      .then(res => res.json())
+      .then(data => {
+        setFeaturedCourses(data);
       });
     }, []);
   useEffect(() => {
@@ -80,6 +86,7 @@ export default function Home() {
           </ul>
         )}
       </div>
+      <hr></hr>
       
       {/* Categories */}
       <div>
@@ -100,6 +107,29 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </div>
+      <hr></hr>
+
+      {/* Featured courses */}
+      <div>
+        <h2 className={styles.RC}>Featured Courses</h2>
+        <ul>
+            {featuredCourses.map(fCourse => (
+              <li key={fCourse.id}>
+                <Link to={`courseDetails?courseId=${fCourse.id}`}>
+                  <img src={fCourse.thumbnail} alt={fCourse.slug}
+                  style={{
+                    width: 20,
+                    height: 20
+                  }}
+                  />
+                  <h3>{fCourse.title}</h3>
+                  {fCourse.shortDesc}<br/>
+                  Rating: {fCourse.rating}
+                </Link>
+              </li>
+            ))}
+          </ul>
       </div>
     </>
   );

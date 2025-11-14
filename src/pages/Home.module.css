@@ -84,3 +84,11 @@ li img
 {
     float: left;
 }
+
+hr
+{
+    box-shadow: 0 0 10px .25em var(--button-bg-dark-col);
+    margin: 10px;
+    border: none;
+    border-top: --button-bg-col;
+}
